@@ -1,7 +1,7 @@
 {
   "name": "wp_gulp",
   "version": "1.0.0",
-  "description": "Learning custom wordpress theme development",
+  "description": "Gulp installation with wordpress and xampp",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
