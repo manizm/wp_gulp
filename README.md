@@ -22,7 +22,7 @@ However, you would need to change a thing or two (depending on your work) in the
 This task will be the one which connects your with xampp server. To customize according to your needs, follow the following instructions:
 
 1. Change the url to your site
-  * `proxy: "localhost-link-to-your/sitefolder/",`
+  * `proxy: "localhost/link-to-your/sitefolder/",`
 2. Change the port (default is 80)
   * `port: 80`
 3. Change the folder hierarchy
