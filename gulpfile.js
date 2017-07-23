@@ -22,7 +22,7 @@ function errorLog(error) {
 
 // Optimize images
 gulp.task('optimize-images', (cb) => {
-  gulp.src(['./*.png', './*.jpg', './*.gif', './*.jpeg', './images/**/*.*',])
+  gulp.src(['./*.png', './*.jpg', './*.gif', './*.jpeg', './src/images/**/*.*',])
   .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
     imagemin.jpegtran({progressive: true}),
@@ -58,22 +58,26 @@ gulp.task('scripts', ()=> {
   .pipe(browserSync.stream())
 })
 
+// php source
 gulp.task('php', ()=>{
   gulp.src('./*.php')
 })
+
 // Watcher
+// Serve static site for pre theme development
 gulp.task('servestatic', ['scripts', 'css'], () => {
   browserSync.init({
-    proxy: "localhost:80/packtWordpress2/wp-content/themes/wp_customtheme/"
+    proxy: "localhost/link/to/your/sitefolder/wp-content/themes/wp_customtheme/"
   })
   gulp.watch(['./src/js/*.js'], ['scripts'])
   gulp.watch(['./sass/*.*'], ['css'])
   gulp.watch(['./*.php'], ['php']).on('change', browserSync.reload)
 })
 
+// serve xampp server for wordpress development
 gulp.task('servedev', ['scripts', 'css'], () => {
   browserSync.init({
-    proxy: "localhost/packtWordpress2/",
+    proxy: "localhost/link/to/your/sitefolder/",
     port: 80
   })
   gulp.watch(['./src/js/*.js'], ['scripts'])
