@@ -1,0 +1,38 @@
+{
+  "name": "wp_gulp",
+  "version": "1.0.0",
+  "description": "Learning custom wordpress theme development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Wordpress",
+    "theme",
+    "custom",
+    "theme",
+    "packt",
+    "learn"
+  ],
+  "author": "Mali Naeemi",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manizm/wp_gulp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manizm/wp_gulp/issues"
+  },
+  "homepage": "https://github.com/manizm/wp_gulp#readme"
+}
