@@ -8,6 +8,7 @@ Gulp installation with wordpress and xampp
 The gulpfile is pretty straight forward. So far, what I change is the url for static and dev servers.
 
 ### Serve Static
+##### Currently not working - check next section
 This task will serve a **static server** in your browser with browser-sync. This has nothing to do with your wordpress site. You can design your site in php (or html) like you would normally (by linking styles and javascript etc in your html/php files).
 However, you would need to change a thing or two (depending on your work) in the `gulp.task('serverstatic')`.
 
