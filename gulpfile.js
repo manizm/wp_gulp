@@ -67,11 +67,11 @@ gulp.task('php', ()=>{
 // Serve static site for pre theme development
 gulp.task('servestatic', ['scripts', 'css'], () => {
   browserSync.init({
-    proxy: "localhost/link-to-your-sitefolder/wp-content/themes/your-theme-name/"
+    server: "./"
   })
   gulp.watch(['./src/js/*.js'], ['scripts'])
   gulp.watch(['./sass/*.*'], ['css'])
-  gulp.watch(['./*.php'], ['php']).on('change', browserSync.reload)
+  gulp.watch('static/**.*').on('change', browserSync.reload)
 })
 
 // serve xampp server for wordpress development
@@ -85,4 +85,4 @@ gulp.task('servedev', ['scripts', 'css'], () => {
   gulp.watch(['./*.php'], ['php']).on('change', browserSync.reload)
 })
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['servedev']);

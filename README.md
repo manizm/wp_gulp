@@ -2,22 +2,22 @@
 Gulp installation with wordpress and xampp
 
 ### Installation
-`npm install`
+1. Clone the repo
+2. Run `npm install` in cli
 
 ### Gulpfile
 The gulpfile is pretty straight forward. So far, what I change is the url for static and dev servers.
 
 ### Serve Static
-##### Currently not working - check next section
 This task will serve a **static server** in your browser with browser-sync. This has nothing to do with your wordpress site. You can design your site in php (or html) like you would normally (by linking styles and javascript etc in your html/php files).
 However, you would need to change a thing or two (depending on your work) in the `gulp.task('serverstatic')`.
 
 1. Change the url to your site
-  * `proxy: 'localhost/link-to-your-sitefolder/wp-content/themes/your-theme-name/'`
-  *  **Note:** I added `wp-content/themes/` because this is what keeps the server static.
-2. Add HTML watcher
-  * `gulp.watch('./*.html').on('change', browserSync.reload)`
-3. Change folder hierarchy how it suites you
+  * `server: './'`
+  *  **Note:** I added `./` because this is what keeps the server static.
+2. Change folder hierarchy how it suites you
+  * do necessary changes in gulpfile.js according to that
+3. In your browser, append **/staic/index.html** after you localhost. Otherwise you will get **cannot /GET** error.
 
 ### Serve Dev
 This task will be the one which connects your with xampp server. To customize according to your needs, follow the following instructions:
